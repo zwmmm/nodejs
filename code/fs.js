@@ -1,6 +1,7 @@
 const fs = require('fs');
+const path = require('path');
 
-fs.readFile('a.txt', 'utf-8', (err, data) => {
+fs.readFile(path.join(__dirname, './file/a.txt'), 'utf-8', (err, data) => {
     if (err) {
         console.log(err);
         return;
@@ -8,7 +9,7 @@ fs.readFile('a.txt', 'utf-8', (err, data) => {
     console.log(data);
 })
 
-fs.readFile('user.png', (err, buff) => {
+fs.readFile(path.join(__dirname, './file/user.png'), (err, buff) => {
     if (err) {
         console.log(err);
         return;
@@ -16,7 +17,7 @@ fs.readFile('user.png', (err, buff) => {
     // console.log(buff.toString('utf-8'));
 })
 
-fs.stat('a.txt', (err, stats) => {
+fs.stat(path.join(__dirname, './file/a.txt'), (err, stats) => {
     if (err) {
         console.log(err);
         return;
