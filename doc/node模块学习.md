@@ -25,4 +25,43 @@
 ## http
 > 创建web服务器模块
 
-    * 
+1. 静态方法
+    - createServer(callback) 创建一个服务 参数是一个回调函数，包含request和response两个对象
+    - listen(port) 监听哪个端口号
+
+## url
+> 将字符串解析成url对象，类似于location对象
+
+1. url.parse(string) 将url字符串转成url对象
+```
+Url {
+  protocol: 'http:',
+  slashes: true,
+  auth: 'user:pass',
+  host: 'host.com:8080',
+  port: '8080',
+  hostname: 'host.com',
+  hash: '#hash',
+  search: '?query=string',
+  query: 'query=string',
+  pathname: '/path/to/file',
+  path: '/path/to/file?query=string',
+  href: 'http://user:pass@host.com:8080/path/to/file?query=string#hash' 
+}
+```
+
+## path
+> 处理路径，由于在服务器上不能直接使用相对路径
+
+1. path.join() 拼接路径
+2. path.basename(path) 返回文件路径下对于的文件名(实际上就是最后一节)
+3. path.dirname(path) 返回当前路径的文件夹路径
+4. path.extname(path) 返回路径.后面的值，可以用来获取文件的后缀名
+5. path.parse(path) 将path转成path对象
+6. path.format(path对象) 将path对象转成path
+
+tips: 经常和__dirname一起使用
+
+## crypto
+> 加密算法模块，提供了很多加密的方法
+
