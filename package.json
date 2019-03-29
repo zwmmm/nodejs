@@ -1,28 +1,21 @@
 {
-  "name": "node",
+  "name": "nodejs",
   "version": "1.0.0",
-  "description": "学习node",
-  "main": "src/app.js",
+  "description": "以demo的形式从0开始学node",
+  "main": "index.js",
   "directories": {
     "doc": "doc"
   },
-  "dependencies": {
-    "koa": "^2.6.2",
-    "koa-bodyparser": "^4.2.1",
-    "koa-router": "^7.4.0"
-  },
-  "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node src/app.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/zwmmm/nodejs.git"
   },
   "keywords": [
-    "node",
-    "demo"
+    "Node",
+    "Koa"
   ],
   "author": "zw",
   "license": "ISC",
